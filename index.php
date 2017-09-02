@@ -1,4 +1,2 @@
 <?php
-echo "Say hello to the world!";
-
-phpinfo();
+echo "Cloud Computing";
