@@ -1,2 +1,4 @@
 <?php
-echo "Say hello to the world";
+echo "Say hello to the world!";
+
+phpinfo();
