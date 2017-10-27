@@ -5,8 +5,6 @@ $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
-echo "<pre>"; print_r($_SERVER); echo "<pre>";
-
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
         continue;
@@ -30,7 +28,7 @@ if (!$link) {
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
-// mysqli_close($link);
+mysqli_close($link);
 
 // die("On DB File");
 
