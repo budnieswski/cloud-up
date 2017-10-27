@@ -5,7 +5,6 @@ $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
-echo "ahsdasd";
 echo "<pre>"; print_r($_SERVER); echo "<pre>";
 
 foreach ($_SERVER as $key => $value) {
