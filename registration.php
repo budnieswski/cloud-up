@@ -1,10 +1,3 @@
-<?php
-/*
-Author: Javed Ur Rehman
-Website: http://www.allphptricks.com/
-*/
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,9 +33,6 @@ Website: http://www.allphptricks.com/
 <input type="password" name="password" placeholder="Password" required />
 <input type="submit" name="submit" value="Register" />
 </form>
-<br /><br />
-<a href="http://www.allphptricks.com/simple-user-registration-login-script-in-php-and-mysqli/">Tutorial Link</a> <br /><br />
-For More Web Development Tutorials Visit: <a href="http://www.allphptricks.com/">AllPHPTricks.com</a>
 </div>
 <?php } ?>
 </body>

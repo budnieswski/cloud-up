@@ -5,6 +5,8 @@ $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
+echo "<pre>"; print_r($_SERVER); echo "<pre>";
+
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
         continue;
@@ -25,7 +27,7 @@ if (!$link) {
     exit;
 }
 
-
+die();
 // $con = mysqli_connect("localhost","root","","register");
 // Check connection
 if (mysqli_connect_errno())

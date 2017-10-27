@@ -1,9 +1,3 @@
-<?php
-/*
-Author: Javed Ur Rehman
-Website: http://www.allphptricks.com/
-*/
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,12 +11,12 @@ Website: http://www.allphptricks.com/
 	session_start();
     // If form submitted, insert values into the database.
     if (isset($_POST['username'])){
-		
+
 		$username = stripslashes($_REQUEST['username']); // removes backslashes
 		$username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
 		$password = stripslashes($_REQUEST['password']);
 		$password = mysqli_real_escape_string($con,$password);
-		
+
 	//Checking is user existing in the database or not
         $query = "SELECT * FROM `users` WHERE username='$username' and password='".md5($password)."'";
 		$result = mysqli_query($con,$query) or die(mysql_error());
@@ -43,10 +37,6 @@ Website: http://www.allphptricks.com/
 <input name="submit" type="submit" value="Login" />
 </form>
 <p>Not registered yet? <a href='registration.php'>Register Here</a></p>
-
-<br /><br />
-<a href="http://www.allphptricks.com/simple-user-registration-login-script-in-php-and-mysqli/">Tutorial Link</a> <br /><br />
-For More Web Development Tutorials Visit: <a href="http://www.allphptricks.com/">AllPHPTricks.com</a>
 </div>
 <?php } ?>
 
