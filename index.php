@@ -1,13 +1,11 @@
 <?php
 
 include('db.php');
-
-$query = "INSERT into `navigation` (agent, server) VALUES ('".$_SERVER['HTTP_USER_AGENT']."', '".json_encode($_SERVER)."')";
-$result = mysqli_query($con,$query);
-if($result){
-    echo $_SERVER['HTTP_USER_AGENT'];
-} else {
-  echo "An error";
+try {
+    $query = "INSERT into `navigation` (agent, server) VALUES ('".$_SERVER['HTTP_USER_AGENT']."', '".json_encode($_SERVER)."')";
+    $result = mysqli_query($con,$query);
+} catch (Exception $e) {
+    echo 'Failed to log navigation';
 }
 
 
