@@ -12,7 +12,7 @@ if($result){
 
 
 
-die();
+
 include("auth.php"); //include auth.php file on all secure pages ?>
 <!DOCTYPE html>
 <html>
